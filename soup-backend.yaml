@@ -21,13 +21,13 @@ spec:
     spec:
       containers:
         - name: soup-backend
-        image: 664966433367.dkr.ecr.ap-northeast-2.amazonaws.com/soup-backend:dfdb1f1969e774e9d2de3fa15d2ffe84be5efd8e
+          image: 664966433367.dkr.ecr.ap-northeast-2.amazonaws.com/soup-backend:dfdb1f1969e774e9d2de3fa15d2ffe84be5efd8e
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8000
           env:
             - name: SPRING_DATASOURCE_URL
-              value: jdbc:mysql://soup-mysql:3306/soup?characterEncoding=UTF-8&s                                                                                                             erverTimezone=UTC
+              value: jdbc:mysql://soup-mysql:3306/soup?characterEncoding=UTF-8&serverTimezone=UTC
             - name: SPRING_DATASOURCE_USERNAME
               value: root
             - name: SPRING_DATASOURCE_PASSWORD
